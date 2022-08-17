@@ -28,7 +28,7 @@ cd build/web
 ```
 sudo nano index.html
 ```
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
