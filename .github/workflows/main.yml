@@ -7,8 +7,6 @@ on:
   pull_request:
     branches: [ "devops" ]
 
-  
-  workflow_dispatch:
 
 jobs:
   build:
