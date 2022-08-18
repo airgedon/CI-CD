@@ -9,6 +9,15 @@ flutter sdk-path
 ```
 sudo nano web/index.html
 ```
+```
+flutter channel beta
+```
+```
+flutter upgrade
+```
+```
+flutter config --enable-web
+```
 ---
 ```
 flutter pub get
@@ -17,6 +26,7 @@ flutter pub get
 ```
 cd web
 ```
+
 ```
 flutter build web
 ```
