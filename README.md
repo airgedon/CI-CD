@@ -18,13 +18,11 @@ flutter upgrade
 ```
 flutter config --enable-web
 ```
----
-```
-flutter pub get
-```
-----
 ```
 cd web
+```
+```
+sudo nano index.html
 ```
 
 ```
