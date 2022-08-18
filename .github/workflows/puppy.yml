@@ -1,0 +1,29 @@
+name: flutter@v2
+
+
+on:
+  push:
+    branches: [ "devops" ]
+  pull_request:
+    branches: [ "devops" ]
+
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+    
+#       - name: cleanup
+#         run : |
+#           sudo chown -R $USER:$USER $GITHUB_WORKSPACE     
+          
+      - uses: actions/checkout@v2
+    
+      - name: Create the container
+        run: |
+          docker build -t flutter-web .
+      
+      - name: Run the container
+        run: |
+          docker run -d -p 8080:80 --name flutter-web flutter-web
