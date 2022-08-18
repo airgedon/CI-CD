@@ -10,6 +10,7 @@ ENV PATH="${PATH}:/usr/local/flutter/bin:/usr/local/flutter/bin/cache/dart-sdk/b
 
 RUN flutter doctor -v
 RUN flutter channel master
+
 RUN flutter upgrade
 
 RUN mkdir /app/
