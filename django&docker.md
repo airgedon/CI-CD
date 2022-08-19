@@ -66,6 +66,9 @@ sudo ufw allow 8000
 ```
 ---
 ```
+docker-compose up -d
+```
+```
 docker-compose run web python3 manage.py makemigrations
 ```
 ```
@@ -77,9 +80,7 @@ docker-compose run web python3 manage.py collectstatic
 ```
 docker-compose run web python3 manage.py createsuperuser
 ```
-```
-docker-compose up -d
-```
+
 ```
 docker-compose up -d --build
 ```
