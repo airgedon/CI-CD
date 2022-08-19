@@ -87,3 +87,14 @@ docker-compose up -d --build
 [link](https://www.youtube.com/watch?v=jyapP2Yy0AQ)
 ### :bulb: Update application in docker container
 [n](https://stackoverflow.com/questions/47854463/docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socke)
+
+---
+```
+sudo groupadd chmod
+```
+```
+su - ${USER}
+```
+```
+sudo usermod -aG chmod devops
+```
