@@ -84,3 +84,5 @@ docker-compose up -d
 docker-compose up -d --build
 ```
 [link](https://www.youtube.com/watch?v=jyapP2Yy0AQ)
+### :bulb: Update application in docker container
+
