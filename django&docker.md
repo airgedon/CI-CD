@@ -80,4 +80,7 @@ docker-compose run web python3 manage.py createsuperuser
 ```
 docker-compose up -d
 ```
+```
+docker-compose up -d --build
+```
 [link](https://www.youtube.com/watch?v=jyapP2Yy0AQ)
