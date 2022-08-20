@@ -1,4 +1,10 @@
 # Install Flutter 
+
+Status of Last Deployment:<br>
+-  <img src="https://github.com/airgedon/docker_deploy/workflows/flutter/badge.svg?branch=main"><br>
+
+
+
 ```
 sudo snap install flutter --classic
 ```
