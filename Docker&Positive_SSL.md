@@ -23,7 +23,15 @@ Please note that if the certificate files were downloaded from your Namecheap ac
 cat your_domain.crt > your_domain_chain.crt ; echo >> your_domain_chain.crt ; cat your_domain.ca-bundle >> your_domain_chain.crt
 
 ```
+> ssh into your server
 
+sudo mkdir /etc/nginx/ssl
+
+sudo nano /etc/nginx/ssl/bundle.cer and copy the bundle.cer file’s contents from your development machine and paste it into this file. Save & exit (Ctrl+X; Yes).
+
+sudo nano /etc/nginx/ssl/key.pem and copy the key.pem file’s contents from your development machine and paste it into this file. Save & exit.
+
+Protect that directory: sudo chmod 600 /etc/nginx/ssl
 
 
 
