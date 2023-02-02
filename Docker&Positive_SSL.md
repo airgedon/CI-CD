@@ -8,11 +8,21 @@ sudo openssl dhparam -out dhparams.pem 2048
 ```
 sudo openssl req -new -key key.pem -out csr.pem
 ```
+
 > copy and paste the contents of the csr.pem file to the form on NameCheap when prompted to following the purchase.
 
+Enter the directory where you uploaded the certificate files. Run the following command to combine the files:
 
+```
+cat your_domain.crt your_domain.ca-bundle >> your_domain_chain.crt
+```
 
+Please note that if the certificate files were downloaded from your Namecheap account, the best command to use will be:
 
+```
+cat your_domain.crt > your_domain_chain.crt ; echo >> your_domain_chain.crt ; cat your_domain.ca-bundle >> your_domain_chain.crt
+
+```
 
 
 
