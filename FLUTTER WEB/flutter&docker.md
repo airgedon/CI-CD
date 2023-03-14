@@ -1,1 +1,42 @@
 [Source](https://medium.com/@kevinwilliams.dev/building-a-flutter-web-container-3b13f4b2bd0c)
+
+```yml
+
+
+name: flutter
+
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+ 
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+          
+      - uses: actions/checkout@v2
+    
+    
+      - name: Stop main container
+        run: | 
+          docker stop flutter-web
+      - name: Delete the container
+        run: |
+          docker rm flutter-web
+          
+          
+      - name: Build an image
+        run: |
+          docker build -t flutter-web .
+      
+      
+      - name: Run the container
+        run: |
+          docker run -d -p 3000:80 --name flutter-web flutter-web
+          
+```
