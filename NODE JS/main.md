@@ -1,6 +1,6 @@
 > Dockerfile
 
-```
+```dockerfile
 FROM node:17
 
 WORKDIR  /home/ubuntu/rating/actions-runner/_work/rating/rating
