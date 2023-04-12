@@ -129,6 +129,7 @@ sudo ufw enable
 sudo ufw status
 ```
 ---
+# Docker
 
 ```Dockerfile
 FROM node:latest as build 
@@ -147,4 +148,26 @@ FROM nginx:1.15
 COPY --from=build /build /usr/share/nginx/html
 # Setup NGINX with config
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+```
+
+```
+touch nginx.conf
+```
+
+```
+server {
+  listen 80;
+  location / {
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+    try_files $uri $uri/ /index.html =404;
+  }
+}
+```
+
+```
+docker build . -t react-image
+```
+```
+docker run  -d -p 80:80 --name react-image react-image
 ```
