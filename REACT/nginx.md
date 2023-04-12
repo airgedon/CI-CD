@@ -1,5 +1,9 @@
 > install docker
 
+```
+sudo ufw allow 22
+```
+
 > install npm and node.js 16
 
 ```
